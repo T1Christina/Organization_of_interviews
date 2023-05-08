@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecruitment</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+    </style>
+
+    <link rel="shortcut icon" href="design/Images/R.png" type="image/png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="CSS/vacancy.css">
+    <link rel="stylesheet" href="CSS/link.css">
+</head> 
+<body>
+        <header> 
+            <div class="header_section">
+                <div class="header_item"> 
+                    <a href="account.html"><img src="design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
+                </div>
+            </div>  
+        </header>
+
+        <section class="sec-1">
+            <h1>Регистрация на собеседование</h1>
+
+        <form>
+            <div class="Container">
+                <div class="link_in"> 
+                    <div>
+                        <p><label for="name">Имя</label></p>
+                        <input type="text" class="BG-input name-1" id="name" required>
+                    </div>
+
+                    <div>
+                        <p><label for="surname">Фамилия</label></p>
+                        <input type="text" class="BG-input sur-2" id="surname" required>
+                    </div>
+                </div> 
+
+                <div class="link_in">
+                    <div>
+                        <p><label for="email">Email</label></p>
+                        <input type="email" class="BG-input inp" id="email" required>
+                    </div>
+                </div>
+
+                
+                <div class="Container-part">
+
+                    <div class="Con-part-1">
+                        <p class="calendar">Выберите день: <input type="date" name="calendar"></p> 
+                        <p class="">Выберите время: <input type="time" name="time"></p>
+                    </div>
+
+                    <div class="Con-part-2">
+                        <div class="common-row test">
+                            <input type="file" id="TestDown">
+                            <label class="btn btn-down-1" for="TestDown">
+                                Загрузить тест
+                            </label>
+                        </div>
+
+                        <div class="common-row">
+                            <input type="file" id="resume">
+                            <label class="btn btn-down-2" for="resume">
+                                Загрузить резюме
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+                <a href="interview.html"><input type="submit" class="btn btn_save btn-vac" value="Принять участие" required></a>
+        </form>
+        </section>
+        
+        <footer>
+            <div class="footer_items">
+                <div>
+                    <a href="account.html"><img src="design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
+                </div>
+                <div class="footer_inf">
+                    <div class="footer_item footer_cont">
+                        <h2>
+                            Контакты
+                        </h2>
+                        <p>+ 7 965 823 52 67</p>
+                    </div>
+                </div>
+            </div>
+        </footer>

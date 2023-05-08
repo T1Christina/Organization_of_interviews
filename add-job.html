@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecruitment</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+    </style>
+
+    <link rel="shortcut icon" href="design/Images/R.png" type="image/png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pages.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="CSS/add-job.css">
+</head>
+<body>
+        <header> 
+            <div class="header_section">
+                <div class="header_item">
+                    <a href="account.html"><img src="design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
+                </div>
+            </div>
+
+            <div class="header_section">
+                    <div class="header_item headerButton"><a href="index.html">Выйти</a></div>
+            </div>    
+        </header>
+
+        <section class="sec-1">
+            <form name="login" method="post" action="">
+                <h1>Создание карточки вакансии</h1>
+                
+                <div class="Container_text">
+                    <div class="Con_part">
+
+                        <div>
+                            <p><label for="name">Название вакансии</label></p>
+                            <input type="text" class="BG-input" id="name" required>
+                        </div>
+
+                        <div>
+                            <p><label for="name">Описание вакансии</label></p>
+                            <input type="text" class="BG-input input" id="name" required>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <h1 class="subtitle">Дополнительные участники собеседования</h1>
+ 
+                <!-- Первый участник -->
+                <div class="vacancies">
+                    <div class="vacancy">
+                        <div class=" symbols cross"></div>
+                        <p>Имя Фамилия участника</p>
+                    </div>
+                    <div class="Number_time">
+                            <p>Свободное время:  </p>
+                            <p class="text_time"><output name="start_time">00:00</output> - <output name="end_time">00:00</output></p>
+                    </div>
+
+                <!-- Ввод данных об участнике -->       
+                <div class="adding_number">
+                    <p class="adding_num">Введите данные: </p>
+                    <div class="Container_text-2">
+                        <div class="Con_part">
+                            <input type="text" class="BG-input input-2" id="name" placeholder="Имя..." required>
+                        </div>
+
+                        <div class="Con_part">
+                            <input type="text" class="BG-input input-2" id="name" placeholder="Фамилия..." required>
+                        </div>
+                    </div>
+                    <!-- Ввод данный о времени -->
+                    <div class="Choice_time">
+                            <div>
+                                <p>Выберите время: <input type="time" class="clock" name="created" id="start" class="clock"> - <input type="time" class="clock" name="created" id="end" class="clock" ></p>
+                            </div>
+                    </div>
+
+                    <input type="submit" class="btn btn_save" value="Добавить" required>
+
+                </div>
+
+                </div>
+
+                <a href="account.html"><input type="submit" class="btn btn_save btn-vac" value="Сохранить" required></a>
+            </form>
+
+        </section>
+        
+        <footer>
+            <div class="footer_items">
+                <div>
+                    <a href="account.html"><img src="design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
+                </div>
+                <div class="footer_inf">
+    
+                    <div class="footer_item footer_cont">
+                        <h2>
+                            Контакты
+                        </h2>
+                        <p>+ 7 965 823 52 67</p>
+                    </div>
+                </div>
+            </div>
+        </footer>

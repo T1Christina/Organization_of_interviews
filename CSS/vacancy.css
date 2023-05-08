@@ -1,0 +1,191 @@
+.about_vac{
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.Title_r{
+    margin-bottom: 10px;
+    margin-top: 30px;
+    color: #525152;
+}
+
+.down{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.download_btn{
+    display: flex;
+    margin-left: 50px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    height: 7px;
+    background-color: #007A3F;
+    border-radius: 5px;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid rgba(196, 196, 196, 0.4);
+    height: 18px;
+    width: 18px;
+    border-radius: 100%;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .comment{
+    width: 530px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .sec-2, .sec-3{
+    margin-bottom: 100px;
+  }
+
+  .save-btn{
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 422px;
+  }
+
+  .copy-btn{
+    margin-top: 50px;
+  }
+
+  @media only screen and (min-width:1440px) {
+    .Container_time{
+      margin-left: 25em;
+      margin-right: 25em;
+    }
+
+    .comment{
+      width: 605px;
+    }
+
+    .download_btn{
+      margin-left: 7.5em;
+    }
+  }
+
+  @media only screen and (max-width:375px) {
+    .about_vac{
+      margin: 0;
+      margin-left: 9%;
+      margin-right: 9%;
+    }
+
+    .Title_r p{
+      font-size: 18px;
+    }
+
+    .comment{
+      width: 330px;
+    }
+
+    .Container_time{
+      margin: 0;
+      margin-top: 10px;
+      margin-left: 10%;
+      margin-right: 8%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .time{
+      width: 150px;
+    }
+
+    .sec-1{
+      margin-bottom: 0;
+    }
+
+    .sec-2, .sec-3{
+      margin-bottom: 30px;
+    }
+
+    .sec-2 .vacancies{
+      margin-top: 20px;
+    }
+
+    .sec-2 .Number_time, .sec-2 .vacancy {
+      margin-left: 40px;
+      justify-content: left;
+    }
+
+    .sec-3 h1{
+      margin-top: 50px;
+    }
+
+    .sec-3 .Title_r{
+      margin-top: 0;
+      text-align: center;
+    }
+
+    .sec-3 .vacancies{
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+
+    .sec-3 .vacancy{
+      flex-direction: column;
+    }
+
+    .sec-3 .vacancies div{
+      margin-top: 10px;
+      /* margin-bottom: 10px; */
+    }
+
+    .download_btn{
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn{
+      padding: 3px;
+      width: 125px;
+      font-size: 15px;
+    }
+
+    .comment{
+      width: 280px;
+    }
+
+    .copy-btn{
+      margin-top: 30px;
+      margin-bottom: 60px;
+      width: 180px;
+      padding: 8px;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

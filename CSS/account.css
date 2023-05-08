@@ -1,0 +1,131 @@
+.Container_time{
+    margin-left: 400px;
+    margin-right: 350px;
+} 
+
+.subtitle{
+    font-size: 20px;
+}
+
+.btn-2{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 60px;
+}
+
+.btn-2:hover{
+    color: #FFFFFF;
+    background-color: #007A3F;
+}
+
+.vacancies{
+    margin-left: 400px;
+}
+
+.vacancy{
+    display: flex;
+}
+
+.link_Vac:hover{
+    text-decoration: underline;
+}
+
+.symbols{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+
+.time{
+    margin: 0;
+} 
+
+.cross{
+    background-image: url(design/Images/Symbols/Cross.jpg);
+}
+
+.cross:hover{
+    background-image: url(design/Images/Symbols/CrossRed.jpg);
+}
+
+.copy{
+    background-image: url(design/Images/Symbols/Copy.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 15px;
+    height: 15px;
+}
+
+.copy:hover{
+    background-image: url(design/Images/Symbols/CopyGreen.png);
+}
+
+.adding{
+    margin-top: 20px;
+    width: 20px;
+}
+
+@media only screen and (max-width:375px) {
+    .Container_time{
+        margin: 0;
+    }
+
+    .vacancies{
+        margin: 0;
+    }
+
+    .Container_text, .Container_time {
+        margin: 0;
+        flex-direction: column;
+        margin-left: 16%;
+        margin-right: 16%;
+        margin-bottom: 30px;
+    }
+
+    .btn-2{
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 15px;
+    }
+
+    .vacancy{
+        justify-content: center;
+    }
+
+    .plus{
+        margin-left: 98px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

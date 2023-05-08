@@ -1,0 +1,236 @@
+body{
+    background-color: #EBECEB;
+}
+
+
+/* Section 1 */
+
+.sec-1{
+    background-image: url(design/Images/Home/Section-1/Main_section\ 46.jpg);
+    background-size: 100% 100%;
+    height: 41em;
+    color: #ffffff;
+}
+
+.sec-1 .Title{
+    text-align: center;
+    margin-top: 7em;
+}
+
+.sec-1 h1{
+    margin-right: 7em;
+    margin-left: 7em;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 39px;
+    border-bottom: 1px solid #007A3F;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.sec-1 h3{
+    font-size: 27px;
+    margin-top: 0;
+    font-weight: 300;
+}
+
+
+
+/* Section 2 */
+
+.cards{    
+    width: 800px;
+    height: 450px;
+    background-color: #FFFFFF;
+}
+
+.card-1, .card-2, .card-3{
+    display: flex;
+    margin: 50px;
+}
+
+ .card-1, .card-3{
+    margin-left: 160px;
+    margin-bottom: 50px;
+} 
+
+.card-2{
+    float: right;
+    margin-right: 160px;
+    margin-bottom: 100px;
+}
+
+.description-card{
+    margin: 35px;
+} 
+
+.step{
+    border-bottom: 1px solid #007A3F;
+    margin-right: 10em;
+    padding-bottom: 5px; 
+}
+
+.cards h1{
+    color: #525152;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cards{
+    font-size: 18px;   
+}
+
+.sec-2-img{
+    width: 350px;
+    height: 450px;
+}
+
+
+
+/* Section 3 */
+
+.sec-3{
+    background-color: #FFFFFF;
+    padding: 40px;
+}
+
+.sec-3_items{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.sec-3_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+
+.sec-3-img{
+    width: 200px;
+    height: 250px;
+}
+
+.sec-3_text{
+    text-align: center;
+}
+
+
+/* Section 4 */
+
+.sec-4{
+    background-color: #FFFFFF;
+}
+
+.sec-4-img{
+    width: 100%;
+    height: 600px; 
+}  
+
+.sec-4-2{
+    height: 160px;
+}
+
+.sec-4 h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width:375px) {
+
+    .sec-1{
+        background-image: url(design/Images/Home/Section-1/Mobile46.jpg);
+    }
+
+    .sec-1 h1{
+        margin:0;
+        font-size: 23px;
+    }
+
+    .sec-1 h3{
+        font-size: 19px;
+    }
+
+    .sec-1 .Title{
+        margin-top: 60px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .cards{
+        width: 330px;
+        height: 635px;
+        font-size: 15px;
+    }
+
+    .cards h1{
+        font-size: 18px;
+    }
+
+    .card-1, .card-2, .card-3{
+        margin: 0;
+        margin-top: 30px;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        margin-bottom: 30px;
+
+        border-radius: 10px;
+    }
+
+    .card-2{
+        float: left;
+        margin-top: 0;
+    }
+
+    .description-card{
+        margin: 25px;
+        margin-top: 0;
+        order: 2;
+    }
+
+    .sec-2-img{
+        width: 290px;
+        height: 290px;
+        border-radius: 5px;
+        margin: 20px;
+        margin-bottom: 0;
+    }
+
+    .step{
+        margin-right: 0;
+    }
+
+    .sec-3_items{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .sec-3_item{
+        margin-bottom: 30px;
+    }
+
+    .sec-3-img{
+        border-radius: 5px;
+    }
+
+    .sec-4-img{
+        width: 100%;
+        height: 30%;
+    }
+
+    .sec-4 h1{
+        margin-bottom: 30px;
+    }
+    
+   
+}

@@ -1,0 +1,139 @@
+body{
+    background-image: url(design/Images/BG-1-p1.jpg);
+}
+
+header{
+    border-bottom: 1px solid #007A3F;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 60px 0 0 0;
+}
+
+.header_item{
+    padding: 0;
+}
+
+a{
+    color: #525152;
+}
+
+h1{
+    margin-bottom: 25px;
+}
+
+.sec-1{
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.Container_text{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 30px;
+}
+
+.Con_part div{
+    margin-top: 10px;
+}
+
+div p{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 18px;
+}
+
+.BG-input{
+    height: 35px;
+    width: 250px;
+    border-width: 1px;
+    border-color: #848684;
+    background: rgba(0, 0, 0, 0);
+}
+
+.Container_time{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 50px;
+}
+
+.days{
+    width: 250px;
+}
+
+.time-title{
+    font-weight: bolder;
+    color: #525152;
+}
+
+.time{
+    margin-top: 10px;
+    width: 250px;
+    display: flex;
+    font-size: 12px;
+}
+
+.time div{
+    margin-right: 10px;
+}
+
+
+.btn{
+    background: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width:375px) {
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+        padding: 20px;
+        flex-direction: column;
+        
+    }
+
+    .sec-1{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    h1{
+        margin-bottom: 10px;
+    }
+
+    .Container_text, .Container_time{
+        margin: 0;
+        flex-direction: column;
+        margin-left: 16%;
+        margin-right: 16%;
+        margin-bottom: 30px;
+    } 
+
+    .Container_time{
+        margin-bottom: 0;
+    }
+
+    .days{
+        margin-bottom: 30px;
+    }
+
+    .BG-input{
+        width: 250px;
+        height: 30px;
+    }
+
+    div p{
+        font-size: 15px;
+    }
+
+    .time{
+        margin-left: 22px;
+        margin-bottom: 30px;
+        padding: 5px;
+    }
+
+} 

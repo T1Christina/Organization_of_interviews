@@ -1,0 +1,182 @@
+.BG-input{
+    width: 350px;
+}
+
+.input{
+    height: 100px;
+}
+
+.Container_text{
+    justify-content: center;
+}
+
+.vacancies{
+    margin-left: 490px;
+} 
+
+.Number_time{
+    display: flex;
+    font-size: 15px;  
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.Con{
+    display: flex;
+    flex-direction: row;
+}
+
+.input-2{
+    width: 145px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.Container_text-2{
+    margin-top: 20px;
+    margin-left: 45px;
+    display: flex;
+}
+
+.Choice_time{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.time div{
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+}
+
+.clock{
+    background-color: #EBECEB;
+    margin-left: 5px;
+    border-color: #848684;
+}
+
+.deleteAdd{
+    background-image: url(design/Images/Symbols/CrossRed.jpg);
+}
+
+.btn_save{
+    margin-top: 25px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 500px;
+} 
+
+.adding_num{
+    margin-left: 45px;
+}
+
+.btn-vac{
+    margin-left: 600px;
+    margin-right: 400px; 
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media only screen and (min-width: 1440px){
+    .vacancies{
+        margin-left: 33em;
+    } 
+
+    .btn_save{
+        margin-right: 35.7em;
+    }
+
+    .btn-vac{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen  and (max-width: 375px) {
+    .Container_text{
+        margin: 0;
+        margin-left: 9%;
+        margin-right: 9%;
+        margin-bottom: 30px;
+    }
+
+    .BG-input{
+        width: 300px;
+    }
+
+    .vacancies{
+        margin: 0;
+    }
+
+    .vacancy{
+        justify-content: left;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+
+    .Number_time{
+        margin-left: 60px;
+    }
+
+    .adding_num{
+        margin-left: 9%;
+        margin-bottom: 5px;
+    }
+
+    .Container_text-2{
+        flex-direction: column;
+        margin: 0;
+        margin-left: 9%;
+        margin-right: 9%;
+    }
+
+    .Con_part{
+        margin-bottom: 10px;
+    }
+
+    .Choice_time{
+        margin: 0;
+        margin-left: 9%;
+        margin-top: 10px;
+    }
+
+    .btn-vac{
+        margin: 0;
+    }
+
+    .btn_save{
+        margin-left: 67%;
+        margin-bottom: 30px;
+    }
+
+    .btn-vac{
+        margin: auto auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
