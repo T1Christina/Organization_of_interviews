@@ -10,28 +10,28 @@
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
     </style>
 
-    <link rel="shortcut icon" href="design/Images/R.png" type="image/png">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/pages.css">
+    <link rel="shortcut icon" href="/design/Images/R.png" type="image/png">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/pages.css"> 
 </head>
 <body>
         <header> 
             <div class="header_section">
                 <div class="header_item">
-                    <a href="registration.html"><img src="design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
+                    <a href="/index.html"><img src="/design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
                 </div>
             </div>
 
             <div class="header_section">
-                    <div class="header_item headerButton"><a href="login.html">Вход </a></div>
+                    <div class="header_item headerButton"><a href="/HTML/login.html">Вход </a></div>
             </div>    
         </header>
 
         <section class="sec-1">
             
-            <form action="check.php" method="post">
+            <form action="/PHP/registration.php" method="post">
                 <h1>Регистрация</h1>
-                
+                 
                 <div class="Container_text">
                     <div class="Con_part">
                         <div>
@@ -51,7 +51,7 @@
                     </div>
 
                     <div class="Con_part">
-                        <div>
+                        <div> 
                             <p><label for="surname">Фамилия</label></p>
                             <input type="text" class="BG-input" id="surname" name="surname" required>
                         </div>
@@ -60,37 +60,36 @@
                             <p><label for="email">Email</label></p>
                             <input type="email" class="BG-input" id="email" name="email" required>
                         </div>
-
+ 
                         <div>
-                            <p><label for="repeat">Повторить пароль</label></p>
-                            <input type="password" class="BG-input" id="repeat"  required>  <!--name=""-->
+                            <p><label for="repeat_pass">Повторить пароль</label></p>
+                            <input type="password" class="BG-input" id="repeat_pass"  name="repeat_pass" required>
                         </div>
+ 
                     </div>
                 </div>
 
                 <div class="Container_time">
                     <div class="days">
                         <p class="time-title">Выберите рабочие дни:</p>
-                        <p><input type="checkbox" name="days" value="Monday">Понедельник</p>
-                        <p><input type="checkbox" name="days" value="Tuesday">Вторник</p>
-                        <p><input type="checkbox" name="days" value="Wednesday">Среда</p>
-                        <p><input type="checkbox" name="days" value="Thursday">Четверг</p>
-                        <p><input type="checkbox" name="days" value="Friday">Пятница</p>
-                        <p><input type="checkbox" name="days" value="Saturday">Суббота</p>
-                        <p><input type="checkbox" name="days" value="Sunday">Воскресенье</p>
+                        <p><input type="checkbox" name="day[]" value="Mn">Понедельник</p>
+                        <p><input type="checkbox" name="day[]" value="Tu">Вторник</p>
+                        <p><input type="checkbox" name="day[]" value="Wed">Среда</p>
+                        <p><input type="checkbox" name="day[]" value="Th">Четверг</p>
+                        <p><input type="checkbox" name="day[]" value="Fr">Пятница</p>
+                        <p><input type="checkbox" name="day[]" value="Sa">Суббота</p>
+                        <p><input type="checkbox" name="day[]" value="Su">Воскресенье</p>
                     </div>
 
                     <div class="Mob_time">
                         <p class="time-title">Выберите время:</p>
                         <div class="time">
                             <div>
-                                <!-- <p><label for="start">Начало:</label></p> -->
-                                <p><input type="time" class="clock" name="created" id="start">  - </p>
+                                <p><input type="time" class="clock" name="time_start" id="start">  - </p>
                             </div>
 
                             <div>
-                                <!-- <p><label for="end">Конец:</label></p> -->
-                                <p><input type="time" class="clock" name="created" id="end" ></p>
+                                <p><input type="time" class="clock" name="time_end" id="end" ></p>
                             </div>
                         </div>
                     </div>
@@ -98,22 +97,22 @@
 
                 <!-- <a href="account.html"><input type="submit" class="btn" value="Зарегистрироваться" required></a> -->
                 <button type="submit" class="btn" name="reg">Зарегистрироваться</button> 
-            </form>
+            </form> 
 
-        </section>
+        </section> 
         
         <footer>
             <div class="footer_items">
                 <div>
-                    <a href="registration.html"><img src="design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
+                    <a href="/index.html"><img src="/design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
                 </div>
                 <div class="footer_inf">
                     <div class="footer_item footer_nav">
                         <h2>
                             Навигация
                         </h2>
-                        <a href="index.html"><p>Главная</p></a>
-                        <a href="login.html"><p>Личный кабинет</p></a>
+                        <a href="/index.html"><p>Главная</p></a>
+                        <a href="/HTML/login.html"><p>Личный кабинет</p></a>
                     </div>
     
                     <div class="footer_item footer_cont">

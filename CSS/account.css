@@ -43,15 +43,15 @@
 } 
 
 .cross{
-    background-image: url(design/Images/Symbols/Cross.jpg);
+    background-image: url(/design/Images/Symbols/Cross.jpg);
 }
 
 .cross:hover{
-    background-image: url(design/Images/Symbols/CrossRed.jpg);
+    background-image: url(/design/Images/Symbols/CrossRed.jpg);
 }
 
 .copy{
-    background-image: url(design/Images/Symbols/Copy.png);
+    background-image: url(/design/Images/Symbols/Copy.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 15px;
@@ -59,7 +59,7 @@
 }
 
 .copy:hover{
-    background-image: url(design/Images/Symbols/CopyGreen.png);
+    background-image: url(/design/Images/Symbols/CopyGreen.png);
 }
 
 .adding{

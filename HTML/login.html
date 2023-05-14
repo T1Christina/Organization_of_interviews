@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ecruitment</title>
+    <title>ecruitment</title> 
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
     </style>
-
-    <link rel="shortcut icon" href="design/Images/R.png" type="image/png">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/pages.css">
-    <link rel="stylesheet" href="CSS/login.css">
+ 
+    <link rel="shortcut icon" href="/design/Images/R.png" type="image/png">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/pages.css">
+    <link rel="stylesheet" href="/CSS/login.css">
 </head> 
-<body>
+<body> 
         <header> 
             <div class="header_section">
                 <div class="header_item">
-                    <a href="login.html"><img src="design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
+                    <a href="/HTML/login.html"><img src="/design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
                 </div>
-            </div>
+            </div> 
 
             <div class="header_section">
                     <div class="header_item headerButton"><a href="registration.html">Регистрация </a></div>
@@ -29,20 +29,20 @@
         </header>
 
         <section class="sec-1">
-            <form name="login" method="post" action="">
+            <form name="login" method="post" action="/PHP/login.php">
                 <h1>Вход в личный кабинет</h1>
                 
                 <div class="Container_text">
-                    <div class="Con_part">
+                    <div class="Con_part"> 
 
                         <div>
                             <p><label for="name">Логин</label></p>
-                            <input type="text" class="BG-input" id="name" required>
+                            <input type="text" class="BG-input" id="name" name="login" required>
                         </div>
 
                         <div>
                             <p><label for="name">Пароль</label></p>
-                            <input type="password" class="BG-input" id="name" required>
+                            <input type="password" class="BG-input" id="name" name="password" equired>
                         </div>
                     </div>
                     </div>
@@ -56,15 +56,15 @@
         <footer>
             <div class="footer_items">
                 <div>
-                    <a href="login.html"><img src="design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
+                    <a href="/HTML/login.html"><img src="/design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
                 </div>
                 <div class="footer_inf">
                     <div class="footer_item footer_nav">
                         <h2>
                             Навигация
                         </h2>
-                        <a href="index.html"><p>Главная</p></a>
-                        <a href="registration.html"><p>Регистрация</p></a>
+                        <a href="/index.html"><p>Главная</p></a>
+                        <a href="/HTML/registration.html"><p>Регистрация</p></a>
                     </div>
     
                     <div class="footer_item footer_cont">

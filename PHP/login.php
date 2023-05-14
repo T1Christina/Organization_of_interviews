@@ -1,0 +1,39 @@
+<?php
+
+    require_once 'connect.php';
+
+    $login = filter_var(trim($_POST['login']),
+    FILTER_SANITIZE_STRING);
+
+    $password = filter_var(trim($_POST['password']),         
+    FILTER_SANITIZE_STRING);
+
+    $result = mysqli_query($connect, "SELECT `id` FROM  `recruiters` WHERE `login` = '$login'");
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $count = mysqli_num_rows($result);
+    if($count==1){
+        $Chrow = $row['id'];
+        // echo $Chrow;
+            $passDB = mysqli_query($connect, "SELECT `password` FROM  `recruiters` WHERE `id`= '$Chrow' ");
+            $row = mysqli_fetch_array($passDB, MYSQLI_ASSOC);
+            $Chpass = $row['password'];
+            // echo $Chpass;
+                if(password_verify($password, $Chpass)){
+                    // die('Пароль правильный');
+                    $connect->close();
+                    header('Location: /HTML/account.html');
+                } else {
+                    die('Неверный пароль!!!');
+                }
+            // print_r($passDB);
+            exit();
+    } else {
+        // print_r($row);
+        die('Неправильный логин!');
+        exit();
+    }
+
+
+
+
+?>
