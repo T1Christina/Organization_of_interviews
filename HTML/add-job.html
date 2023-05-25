@@ -10,27 +10,27 @@
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
     </style>
 
-    <link rel="shortcut icon" href="design/Images/R.png" type="image/png">
+    <link rel="shortcut icon" href="/design/Images/R.png" type="image/png">
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/pages.css">
     <link rel="stylesheet" href="/CSS/account.css">
     <link rel="stylesheet" href="/CSS/add-job.css">
-</head>
-<body>
-        <header> 
+</head> 
+<body> 
+        <header>  
             <div class="header_section">
                 <div class="header_item">
-                    <a href="/HTML/account.html"><img src="/design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
+                    <a href="/HTML/account.php"><img src="/design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
                 </div>
             </div>
 
             <div class="header_section">
                     <div class="header_item headerButton"><a href="/index.html">Выйти</a></div>
             </div>    
-        </header>
+        </header> 
 
         <section class="sec-1">
-            <form name="login" method="post" action="">
+            <form name="job" method="post" action="/PHP/add-job.php">
                 <h1>Создание карточки вакансии</h1>
                 
                 <div class="Container_text">
@@ -38,64 +38,54 @@
 
                         <div>
                             <p><label for="name">Название вакансии</label></p>
-                            <input type="text" class="BG-input" id="name" required>
+                            <input type="text" class="BG-input" id="name" name="name" required>
                         </div>
 
                         <div>
-                            <p><label for="name">Описание вакансии</label></p>
-                            <input type="text" class="BG-input input" id="name" required>
+                            <p><label for="desc">Описание вакансии</label></p>
+                            <input type="text" class="BG-input input" id="desc" name="description" required>
                         </div>
                     </div>
                     </div>
                 </div>
 
                 <h1 class="subtitle">Дополнительные участники собеседования</h1>
- 
-                <!-- Первый участник -->
-                <div class="vacancies">
-                    <div class="vacancy">
-                        <div class=" symbols cross"></div>
-                        <p>Имя Фамилия участника</p>
-                    </div>
-                    <div class="Number_time">
-                            <p>Свободное время:  </p>
-                            <p class="text_time"><output name="start_time">00:00</output> - <output name="end_time">00:00</output></p>
-                    </div>
+                <div class="vacancies" id="vacancies">
+                                <!-- Участники -->
 
-                <!-- Ввод данных об участнике -->       
-                <div class="adding_number">
+                <!-- Ввод данных об участнике -->  
+                <div class="adding_number"> 
                     <p class="adding_num">Введите данные: </p>
                     <div class="Container_text-2">
                         <div class="Con_part">
-                            <input type="text" class="BG-input input-2" id="name" placeholder="Имя..." required>
+                            <input type="text" class="BG-input input-2 partName" id="name" placeholder="Имя..." name="partName" required>
                         </div>
 
                         <div class="Con_part">
-                            <input type="text" class="BG-input input-2" id="name" placeholder="Фамилия..." required>
+                            <input type="text" class="BG-input input-2 partSurname" id="name" placeholder="Фамилия..." name="partSurname" required>
                         </div>
                     </div>
                     <!-- Ввод данный о времени -->
                     <div class="Choice_time">
                             <div>
-                                <p>Выберите время: <input type="time" class="clock" name="created" id="start" class="clock"> - <input type="time" class="clock" name="created" id="end" class="clock" ></p>
+                                <p>Выберите время: <input type="time" class="clock partStartTime" name="StartClock" id="start" class="clock"> - <input type="time" class="clock partEndTime" name="EndClock" id="end" class="clock" ></p>
                             </div>
                     </div>
 
-                    <input type="submit" class="btn btn_save" value="Добавить" required>
-
+                    <button class="btn btn_save" name="btnAdd" onclick="AddPart()">Добавить</button>
                 </div>
 
                 </div>
 
-                <a href="account.html"><input type="submit" class="btn btn_save btn-vac" value="Сохранить" required></a>
-            </form>
+                <a href="account.html"><input type="submit" class="btn btn_save btn-vac" value="Сохранить" name="btnSave" required></a>
+            </form> 
 
         </section>
         
         <footer>
             <div class="footer_items">
                 <div>
-                    <a href="/HTML/account.html"><img src="/design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
+                    <a href="/HTML/account.php"><img src="/design/Images/LogoLight.png" alt="Логотип" class="headerlogo"></a>
                 </div>
                 <div class="footer_inf">
     
@@ -108,3 +98,8 @@
                 </div>
             </div>
         </footer>
+        <script src="/JS/3.7.0.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script src="/JS/participant.js"></script>
+</body>
+</html>

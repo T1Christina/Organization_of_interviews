@@ -1,3 +1,7 @@
+<?php
+    include "../PHP/account.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +24,7 @@
             <div class="header_section">
                 <div class="header_item"> 
                     <a href="/HTML/account.html"><img src="/design/Images/LogoDark.png" alt="Логотип" class="headerlogo"></a>
-                </div>
+                </div> 
             </div>
 
             <div class="header_section">
@@ -29,37 +33,41 @@
         </header>
 
         <section class="sec-1">
-                <h1> <!-- Вывод ФИО из поля регистрации--> Фамилия Имя Отчество</h1> 
+                <h1> 
+                    <?php 
+                        echo $NameUser.' '.$SurnameUser;
+                    ?>
+                </h1> 
 
                 <h1 class="subtitle">Расписание</h1>      
                 <div class="Container_time">
                     <div class="days">
-                        <p class="time-title">Рабочие дни:</p>
-                        <p><output name="Monday" value="Monday">Понедельник</p>
-                        <p><output name="Tuesday" value="Tuesday">Вторник</p>
-                        <p><output name="Wednesday" value="Wednesday">Среда</p>
-                        <p><output name="Thursday" value="Thursday">Четверг</p>
-                        <p><output name="Friday" value="Friday">Пятница</p>
-                        <!-- <p><output name="Saturday" value="Saturday">Суббота</p> -->
-                        <!-- <p><output name="Sunday" value="Sunday">Воскресенье</p> -->
+                        <p class="time-title" id="selectDays">Рабочие дни:</p>
+                        <p  id="selectDay"><?php echo $DaysUser[0]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[1]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[2]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[3]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[4]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[5]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[6]; ?></p> 
                     </div>
 
                     <div>
                         <p class="time-title">Свободное время:</p>
                         <div class="time">
                             <div>
-                                <p class="text_time">Начало:<output name="start_time">00:00</output></p>
+                                <p class="text_time">Начало:<output name="start_time"><?php echo $TimeUserStart ?></output></p>
                             </div>
 
                             <div>
-                                <p class="text_time">Конец: <output name="end_time">00:00</output></p>
+                                <p class="text_time">Конец: <output name="end_time"><?php echo $TimeUserEnd ?></output></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- При нажатии "Изменить", открывается форма для ввода данных (дни и время), кнопка "Изменить" меняется на "Сохранить"-->
-                <input type="submit" class="btn btn-2" value="Изменить" required>
+                <button class="btn btn-2" onclick="ChangeWork()">Изменить</button>
 
                  <!-- При нажатии "Сохранить", сохраняются новые данные-->
                 <!-- <input type="submit" class="btn" value="Сохранить" required> -->
@@ -94,3 +102,8 @@
                 </div>
             </div>
         </footer>
+
+        <script src="/JS/account.js"> 
+        </script>
+    </body>
+</html>

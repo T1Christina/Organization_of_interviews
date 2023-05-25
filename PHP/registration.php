@@ -20,7 +20,7 @@
    FILTER_SANITIZE_STRING);
 
    $days = $_POST['day'];
-   $allData = implode($days, ', ');
+   $allData = implode($days, " ");
 
    $time_start = $_POST['time_start'];
    $time_end = $_POST['time_end'];
@@ -61,5 +61,5 @@
 
    $connect->close();
 
-   header('Location: /HTML/account.html');
+   header('Location: /HTML/login.html');
 ?>   
