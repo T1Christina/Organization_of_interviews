@@ -2,7 +2,7 @@
     session_start();
     require_once 'connect.php';
 
-    $user = $_SESSION['idUser'];
+    $user = $_SESSION['idUser']; 
     $result = mysqli_query($connect, "SELECT `name`, `surname` FROM  `recruiters` WHERE `id` = '$user'");
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count = mysqli_num_rows($result);
@@ -14,7 +14,7 @@
     $count = mysqli_num_rows($result);
     $DaysUser = $row['work_days'];
     $DaysUser = explode(" ", $DaysUser);
-
+ 
     $result = mysqli_query($connect, "SELECT `work_time_start` FROM  `recruiters` WHERE `id` = '$user'");
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count = mysqli_num_rows($result);

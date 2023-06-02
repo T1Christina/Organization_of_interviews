@@ -77,7 +77,7 @@
                 <div class="vacancies">
                     <div class="vacancy">
                         <div class="symbols cross"></div>
-                        <a href="/HTML/vacancy.html" class="link_Vac"><p>Название вакансии</p></a>
+                        <a href="/HTML/vacancy.html" class="link_Vac"><p>Junior Frontend-разработчик (JavaScript)</p></a>
                         <div class="symbols copy"></div>
 
                     </div>
@@ -103,7 +103,6 @@
             </div>
         </footer>
 
-        <script src="/JS/account.js"> 
-        </script>
+        <script src="/JS/account.js"></script>
     </body>
 </html>

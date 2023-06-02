@@ -28,9 +28,9 @@
                     <div class="header_item headerButton"><a href="/index.html">Выйти</a></div>
             </div>    
         </header> 
-
+ 
         <section class="sec-1">
-            <form name="job" method="post" action="/PHP/add-job.php">
+            <form name="job">
                 <h1>Создание карточки вакансии</h1>
                 
                 <div class="Container_text">
@@ -38,7 +38,7 @@
 
                         <div>
                             <p><label for="name">Название вакансии</label></p>
-                            <input type="text" class="BG-input" id="name" name="name" required>
+                            <input type="text" class="BG-input" id="nameVacancy" name="name" required>
                         </div>
 
                         <div>
@@ -52,17 +52,17 @@
                 <h1 class="subtitle">Дополнительные участники собеседования</h1>
                 <div class="vacancies" id="vacancies">
                                 <!-- Участники -->
-
+ 
                 <!-- Ввод данных об участнике -->  
                 <div class="adding_number"> 
-                    <p class="adding_num">Введите данные: </p>
+                    <p class="adding_num">Введите данные: </p> 
                     <div class="Container_text-2">
                         <div class="Con_part">
-                            <input type="text" class="BG-input input-2 partName" id="name" placeholder="Имя..." name="partName" required>
+                            <input type="text" class="BG-input input-2 partName" id="nameParticipant" placeholder="Имя..." name="partName" required>
                         </div>
 
                         <div class="Con_part">
-                            <input type="text" class="BG-input input-2 partSurname" id="name" placeholder="Фамилия..." name="partSurname" required>
+                            <input type="text" class="BG-input input-2 partSurname" id="SurnameParticipant" placeholder="Фамилия..." name="partSurname" required>
                         </div>
                     </div>
                     <!-- Ввод данный о времени -->
@@ -72,14 +72,14 @@
                             </div>
                     </div>
 
-                    <button class="btn btn_save" name="btnAdd" onclick="AddPart()">Добавить</button>
-                </div>
 
+                    <button type="button" class="btn btn_save" name="btnAdd" onclick="AddPart()">Добавить</button>
                 </div>
-
-                <a href="account.html"><input type="submit" class="btn btn_save btn-vac" value="Сохранить" name="btnSave" required></a>
+    
+                </div>
+                <button type="button" class="btn btn_save btn-vac" name="btnSave" id="AddVacancy" onclick="AddJob()">Сохранить</button>
             </form> 
-
+ 
         </section>
         
         <footer>

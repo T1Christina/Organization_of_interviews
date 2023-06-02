@@ -4,7 +4,7 @@
 
     $login = filter_var(trim($_POST['login']),
     FILTER_SANITIZE_STRING);
-
+ 
     $password = filter_var(trim($_POST['password']),         
     FILTER_SANITIZE_STRING);
 
@@ -21,7 +21,7 @@
                 if(password_verify($password, $Chpass)){
                     // die('Пароль правильный');
                     $connect->close();
-                    $_SESSION['idUser'] = $Chrow;
+                    $_SESSION['idUser'] = $Chrow; // передача доступа другим файлам php к номеру id 
                     header("Location: /HTML/account.php");
                 } else {
                     die('Неверный пароль!!!');

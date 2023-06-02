@@ -1,26 +1,42 @@
 <?php
 
-   session_start();
-   require_once 'connect.php';
+  session_start();
+  require_once 'connect.php'; 
 
-   $user = $_SESSION['idUser'];
+  $user = $_SESSION['idUser']; //id рекрутера из файла login.php 
 
-   $name = filter_var(trim($_POST['name']),
-   FILTER_SANITIZE_STRING); 
+  $NameVac = $_POST['NameJob']; // Название вакансии
+  $DescriptionVac = $_POST['Description'];  // Описание вакансии
 
-   $description = filter_var(trim($_POST['description']),
-   FILTER_SANITIZE_STRING); 
+  // Запись названия и описания вакансии в таблицу `vacancies` с id рекрутера
+  $connect->query("INSERT INTO `vacancies` (`id_user`, `name`, `description`) 
+  VALUES('$user', '$NameVac', '$DescriptionVac')");      
 
-   if  (isset ($_POST['btnSave'])) {
-  //  $connect->query("INSERT INTO `vacancies` (`id_user`, `name`, `description`)
-  //  VALUES('$user', '$name', '$description')");
+  // Получение id только что созданной вакансии
+  $idVac = mysqli_insert_id($connect);
+  $_SESSION['idVacancy'] = $idVac; // передача доступа другим файлам php к номеру id вакансии 
 
-  $NameParts = $_POST['nameParts'];
-  print_r($NameParts);
+  // Получение остальных данных из ajax participant.js
+  $NameParts = $_POST['nameParts'];  
+  $SurnameParts = $_POST['SurnameParts'];  
+  $TimeStart = $_POST['timeStart']; 
+  $TimeEnd = $_POST['timeEnd'];  
+  
 
- }
+  // Получение отдельных элементов массива
+  $Mass = count($NameParts); //Найти длину массива 
+  $Num = 0; // Нулевой элемент массива
 
-$connect->close(); 
-// header('Location: /HTML/vacancy.html');
+  //Повторять от 0 до длины массива, чтобы пройтись по всем существующим элементам
+  for ($i = 0; $i < $Mass; $i = $i + 1) {
+
+  //Запись данных в таблицу `participants` по очереди каждую строку, разделяя массив
+  $connect->query("INSERT INTO `participants` (`name`, `surname`, `work_time_start`, `work_time_end`, `id_vacancy`)
+  VALUES('$NameParts[$Num]', '$SurnameParts[$Num]', '$TimeStart[$Num]', '$TimeEnd[$Num]', '$idVac')");
+
+    $Num = $Num + 1; //увеличение индекса массива на единицу 
+  }
+  
+  $connect->close();
  
-?>
+  

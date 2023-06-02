@@ -1,3 +1,8 @@
+<?php
+    include "../PHP/vacancy.php"; //подключение php файла
+    include "../PHP/account.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,75 +30,79 @@
             </div>
 
             <div class="header_section">
+
+
                     <div class="header_item headerButton"><a href="/index.html">Выйти </a></div>
             </div>    
-        </header>
+        </header> 
 
         <section class="sec-1">
-                 <h1>Название вакансии</h1>
 
-                 <p class="about_vac">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem recusandae ut non,
-                     temporibus similique fuga magnam quo cumque alias quis molestiae vitae eius voluptates 
-                     deserunt debitis reiciendis omnis mollitia necessitatibus!</p>
+                <!-- НАзвание вакансии -->
+                 <h1> <?php echo $NameVac1; ?></h1>
+
+                 <!-- Описание вакансии -->
+                 <p class="about_vac"> <?php echo $AboutVac1; ?> </p> 
 
                      <div class="vacancies">
                         <div class="vacancy Title_r">
-                            <p class="time-title">Имя Фамилия рекрутера</p>
+                            <p class="time-title"> <?php  echo $NameUser.' '.$SurnameUser; ?></p>
                         </div>
                      </div>
+    
+                <div class="Container_time">
+                    <div class="days">
+                        <p class="time-title" id="selectDays">Рабочие дни:</p>
+                        <p  id="selectDay"><?php echo $DaysUser[0]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[1]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[2]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[3]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[4]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[5]; ?></p>
+                        <p id="selectDay"><?php echo $DaysUser[6]; ?></p> 
+                    </div>
 
-                     <div class="Container_time">
-                        <div class="days">
-                            <p class="time-title">Рабочие дни:</p>
-                            <p><output name="Monday" value="Monday">Понедельник</p>
-                            <p><output name="Tuesday" value="Tuesday">Вторник</p>
-                            <p><output name="Wednesday" value="Wednesday">Среда</p>
-                            <p><output name="Thursday" value="Thursday">Четверг</p>
-                            <p><output name="Friday" value="Friday">Пятница</p>
-                            <!-- <p><output name="Saturday" value="Saturday">Суббота</p> -->
-                            <!-- <p><output name="Sunday" value="Sunday">Воскресенье</p> -->
-                        </div>
-    
-                        <div>
-                            <p class="time-title">Свободное время:</p>
-                            <div class="time">
-                                <div>
-                                    <p class="text_time"><output name="start_time">00:00</output> - </p>
-                                </div>
-    
-                                <div>
-                                    <p class="text_time"><output name="end_time">00:00</output></p>
-                                </div>
+                    <div>
+                        <p class="time-title">Свободное время:</p>
+                        <div class="time">
+                            <div>
+                                <p class="text_time">Начало:<output name="start_time"><?php echo $TimeUserStart ?></output></p>
+                            </div>
+
+                            <div>
+                                <p class="text_time">Конец: <output name="end_time"></output> <?php echo $TimeUserEnd ?> </p>
                             </div>
                         </div>
-                     </div>
+                    </div>
+                </div> 
+
         </section>
 
         <section class="sec-2">
 
                 <h1 class="subtitle">Дополнительные участники собеседования</h1>
-
-                <!-- Первый участник -->
-                <div class="vacancies">
+ 
+                <!-- Первый участник --> 
+                <!-- <div class="vacancies">
                     <div class="vacancy">
-                        <p class="time-title">Имя Фамилия участника</p>
+                        <p class="time-title">Виктория Иванова</p>
                     </div>
                     <div class="Number_time">
-                            <p class="text_time"> Свободное время: <output name="start_time">00:00</output> - <output name="end_time">00:00</output></p>
+                            <p class="text_time"> Свободное время: <output name="start_time">15:00</output> - <output name="end_time">16:00</output></p>
                     </div>
-                </div>
-        </section>
+                </div> -->
+        </section> 
 
         <section class="sec-3">
                     <h1 class="subtitle">Кандидаты</h1>
 
-                    <div class="vacancies">
+                    <!-- <div class="vacancies">
                         <div class="vacancy Title_r">
-                            <p class="time-title">Имя Фамилия кандидата</p>
+                            <p class="time-title">Александр Васильев</p>
                         </div>
 
                         <div class="vacancy">
-                            <p>Дата и время: <output>--.--.----</output> <output name="start_time">00:00</output> - <output name="end_time">00:00 </output></p>
+                            <p>Дата и время: <output>15.05.2023</output> <output name="start_time">15:00</output>-<output name="end_time">15:30</output></p>
 
                             <div class="download_btn">
                                 <a href="#" download><input type="submit" class="btn down " value="⇪ тест"></a>
@@ -101,7 +110,7 @@
                             </div>
                         </div>
 
-                        <div><p> Email: <output name="start_time">______________@gmail.com</output></p></div>
+                        <div><p> Email: <output name="start_time">Alexandr_vasiliev@gmail.com</output></p></div>
 
                         <div class="slider"> 
                             <p>Статус кандидата: 
@@ -131,9 +140,9 @@
                         <input type="submit" class="btn save-btn" value="Сохранить" required>
 
                     </div> 
-                     </div>
+                     </div> -->
 
-                     <input type="submit" class="btn copy-btn" value="Скопировать ссылку" required>
+                     <button type="button" class="btn copy-btn CopyLink">Скопировать ссылку</button>
 
         </section>
         
@@ -152,3 +161,7 @@
                 </div>
             </div>
         </footer>
+
+        <script src="/JS/vacancy.js"></script>
+</body>
+</html>

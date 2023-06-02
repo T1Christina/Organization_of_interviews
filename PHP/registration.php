@@ -1,7 +1,7 @@
 <?php
    require_once 'connect.php';
 
-   $name = filter_var(trim($_POST['name']),
+   $name = filter_var(trim($_POST['name']),  
    FILTER_SANITIZE_STRING); 
 
    $surname = filter_var(trim($_POST['surname']),
