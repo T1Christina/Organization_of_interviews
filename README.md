@@ -3,7 +3,7 @@
 
 This web service is aimed at improving the recruiter’s work efficiency by automating processes, as well as making selection more efficient.
 
-### Main functions of the project:
+### Main functions of the service:
 + Create a vacancy card with data: title and description of the vacancy, information about additional interview participants
 + Send the vacancy link to candidates for their registration. After the candidate registers, the information will be on the vacancy page
 + Download your resume and test task
